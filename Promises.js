@@ -7,8 +7,7 @@ function fetchUserData() {
           email: 'hishmatdrawarh786@gmail.com',
           isAdmin: false
         };
-        resolve(userData); // Resolve the promise with the data
-        // In a real scenario, there might be error handling with reject() if something goes wrong
+        resolve(userData);
       }, 1000); // Simulating a delay of 1 second
     });
   }
