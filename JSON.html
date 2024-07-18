@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Parsing a JSON Array.</h2>
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "Hishmat",
+        age: 23,
+        address: {
+          city: "Mithi",
+          state: "Sindh",
+        },
+        hobbies: ["reading", "traveling", "coding"],
+      };
+      // Convert JSON object to JSON string
+      const jsonString = JSON.stringify(person);
+      console.log(jsonString);
+      // Parsing JSON string back to JSON object
+      const parsedPerson = JSON.parse(jsonString);
+
+      document.getElementById("demo").innerHTML = parsedPerson.address.city;
+    </script>
+  </body>
+</html>
