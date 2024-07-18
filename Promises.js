@@ -13,13 +13,23 @@ function fetchUserData() {
   }
   
   // Using the promise
-  fetchUserData()
-    .then((userData) => {
-      console.log('User data:', userData);
+fetchUserData()
+  .then((userData) => {
+    console.log('User data:', userData);
       // Further processing with the fetched user data
-    })
-    .catch((error) => {
-      console.error('Error fetching user data:', error);
+  })
+  .catch((error) => {
+    console.error('Error fetching user data:', error);
       // Handle errors if the promise is rejected
-    });
+});
   
+
+let countValue = new Promise(function (resolve, reject) {
+  resolve("Promise resolved");
+});
+
+countValue.then(function successValue(result) {
+    console.log(result);
+}).then(function successValue1() {
+  console.log("You can call multiple functions this way.");
+});
